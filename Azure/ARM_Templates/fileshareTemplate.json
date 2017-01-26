@@ -201,13 +201,11 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "fileUris": [
-                        "https://YOURSTORAGEACCOUNT.blob.core.windows.net/common/createFS.sh"
+                        "https://raw.githubusercontent.com/mrmunch/common/master/Azure/ARM_Templates/createFS.sh"
                     ]
                 },
                 "protectedSettings": {
-                    "commandToExecute": "[concat('bash ./createFS.sh ', variables('storageAccountName'), ' ', listkeys(variables('storageAccountID'), '2015-05-01-preview').key1, ' myshare myshare/dir myshare/dir/subdir')]",
-                    "storageAccountName": "YOURSTORAGEACCOUNT",
-                    "storageAccountKey": "YOURACCOUNTKEY"
+                    "commandToExecute": "[concat('bash ./createFS.sh ', variables('storageAccountName'), ' ', listkeys(variables('storageAccountID'), '2015-05-01-preview').key1, ' myshare myshare/dir myshare/dir/subdir')]"
                 }
             }
         }
